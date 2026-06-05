@@ -77,21 +77,6 @@ The repository is designed as both:
 | Secrets       | Vault (planned)       |
 | Configuration | Environment Variables |
 
-### Observability
-
-| Service    | Technology    |
-| ---------- | ------------- |
-| Metrics    | Prometheus    |
-| Dashboards | Grafana       |
-| Tracing    | OpenTelemetry |
-| Logs       | Loki          |
-
-### CI/CD
-
-| Service    | Technology     |
-| ---------- | -------------- |
-| Automation | GitHub Actions |
-
 ---
 
 ## Repository Structure
@@ -133,52 +118,6 @@ cloud-platform-core/
 
 ---
 
-## Learning Roadmap
-
-### Level 1 — Containers
-
-* Docker fundamentals
-* Images
-* Volumes
-* Networking
-* Compose
-
-### Level 2 — Cloud Services
-
-* S3-compatible storage
-* Azure Blob storage
-* Message queues
-* Serverless functions
-
-### Level 3 — Infrastructure as Code
-
-* Terraform modules
-* Environment provisioning
-* Reusable infrastructure
-
-### Level 4 — Observability
-
-* Metrics
-* Logging
-* Tracing
-* Dashboards
-
-### Level 5 — Security
-
-* Secrets management
-* Container scanning
-* IAM concepts
-* Supply chain security
-
-### Level 6 — Kubernetes
-
-* Helm
-* GitOps
-* Autoscaling
-* Service Mesh
-
----
-
 ## Example Use Case
 
 ### Event-Driven File Processing
@@ -193,30 +132,6 @@ cloud-platform-core/
 8. Dashboards visualize platform activity.
 
 This architecture demonstrates common cloud patterns used in production systems.
-
----
-
-## Engineering Decisions
-
-### Why LocalStack?
-
-Provides local AWS-compatible services without requiring a cloud account.
-
-### Why Azurite?
-
-Provides local Azure Storage emulation for experimentation and development.
-
-### Why Docker?
-
-Ensures reproducibility and simplifies onboarding.
-
-### Why Terraform?
-
-Industry-standard Infrastructure-as-Code tool supporting multiple cloud providers.
-
-### Why Event-Driven Architecture?
-
-Modern cloud systems frequently rely on asynchronous processing for scalability and resilience.
 
 ---
 
