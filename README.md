@@ -52,57 +52,6 @@ The repository is designed as both:
 
 ---
 
-## Architecture
-
-The platform simulates a realistic cloud workflow.
-
-```text
-                ┌───────────────┐
-                │     User      │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │ API Gateway   │
-                └───────┬───────┘
-                        │
-         ┌──────────────┼──────────────┐
-         ▼                             ▼
-
- ┌───────────────┐            ┌───────────────┐
- │ AWS S3        │            │ Azure Blob    │
- │ LocalStack    │            │ Azurite       │
- └───────┬───────┘            └───────┬───────┘
-         │                             │
-         ▼                             ▼
-
- ┌───────────────┐            ┌───────────────┐
- │ SQS Queue     │            │ Azure Queue   │
- └───────┬───────┘            └───────┬───────┘
-         │                             │
-         ▼                             ▼
-
-             ┌──────────────────┐
-             │ Worker/Lambda    │
-             └────────┬─────────┘
-                      │
-                      ▼
-
-             ┌──────────────────┐
-             │ Metadata Store   │
-             └────────┬─────────┘
-                      │
-                      ▼
-
-             ┌──────────────────┐
-             │ Monitoring       │
-             │ Logging          │
-             │ Tracing          │
-             └──────────────────┘
-```
-
----
-
 ## Technology Stack
 
 ### Cloud Emulation
@@ -230,61 +179,6 @@ cloud-platform-core/
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-* Docker
-* Docker Compose
-* Git
-* Python 3.12+
-* AWS CLI
-* Azure CLI
-
----
-
-### Clone Repository
-
-```bash
-git clone https://github.com/<username>/cloud-platform-core.git
-
-cd cloud-platform-core
-```
-
----
-
-### Start Platform
-
-```bash
-make up
-```
-
----
-
-### Stop Platform
-
-```bash
-make down
-```
-
----
-
-### Reset Environment
-
-```bash
-make reset
-```
-
----
-
-### Run Tests
-
-```bash
-make test
-```
-
----
-
 ## Example Use Case
 
 ### Event-Driven File Processing
@@ -323,30 +217,6 @@ Industry-standard Infrastructure-as-Code tool supporting multiple cloud provider
 ### Why Event-Driven Architecture?
 
 Modern cloud systems frequently rely on asynchronous processing for scalability and resilience.
-
----
-
-## Current Status
-
-### Completed
-
-* Repository structure
-* Docker foundation
-* Local cloud emulation
-* Initial networking
-
-### In Progress
-
-* Event-driven workflow
-* Monitoring stack
-* Infrastructure automation
-
-### Planned
-
-* Kubernetes deployment
-* GitOps workflows
-* Security hardening
-* Multi-environment support
 
 ---
 
