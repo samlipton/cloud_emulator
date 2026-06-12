@@ -2,6 +2,7 @@
 
 The platform simulates a realistic cloud workflow.
 
+```text
                 ┌───────────────┐
                 │     User      │
                 └───────┬───────┘
@@ -18,14 +19,14 @@ The platform simulates a realistic cloud workflow.
  │ AWS S3        │            │ Azure Blob    │
  │ LocalStack    │            │ Azurite       │
  └───────┬───────┘            └───────┬───────┘
-         │                             │
-         ▼                             ▼
+         │                            │
+         ▼                            ▼
 
  ┌───────────────┐            ┌───────────────┐
  │ SQS Queue     │            │ Azure Queue   │
  └───────┬───────┘            └───────┬───────┘
-         │                             │
-         ▼                             ▼
+         │                            │
+         ▼                            ▼
 
              ┌──────────────────┐
              │ Worker/Lambda    │
@@ -44,3 +45,4 @@ The platform simulates a realistic cloud workflow.
              │ Logging          │
              │ Tracing          │
              └──────────────────┘
+```
