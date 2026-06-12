@@ -1,6 +1,6 @@
 # Cloud Platform Core
 
-A production-inspired local cloud platform that emulates key AWS and Azure services using Docker. The goal is to provide a hands-on environment for learning, experimentation, and portfolio demonstration of modern cloud engineering, DevOps, and platform engineering practices.
+A production-inspired local cloud platform that emulates AWS and Azure essential services using Docker. The goal is to provide a hands-on environment for learning and experimenting on modern cloud engineering.
 
 ---
 
@@ -13,8 +13,6 @@ This project reproduces common cloud-native architectures locally using:
 * Docker and Docker Compose
 * Infrastructure-as-Code
 * CI/CD pipelines
-* Observability and monitoring
-* Security best practices
 
 The repository is designed as both:
 
@@ -52,65 +50,23 @@ The repository is designed as both:
 
 ---
 
-## Technology Stack
-
-### Cloud Emulation
-
-| Service | Technology |
-| ------- | ---------- |
-| AWS     | LocalStack |
-| Azure   | Azurite    |
-
-### Containers
-
-| Service          | Technology     |
-| ---------------- | -------------- |
-| Runtime          | Docker         |
-| Orchestration    | Docker Compose |
-| Future Extension | Kubernetes     |
-
-### Infrastructure
-
-| Service       | Technology            |
-| ------------- | --------------------- |
-| IaC           | Terraform             |
-| Secrets       | Vault (planned)       |
-| Configuration | Environment Variables |
-
----
-
 ## Repository Structure
 
 ```text
-cloud-platform-core/
-│
-├── apps/
-│   ├── api/
-│   ├── workers/
-│   └── shared/
-│
+cloud_emulator/
 ├── docker/
 │   ├── localstack/
 │   ├── azurite/
 │   ├── monitoring/
 │   └── reverse-proxy/
-│
 ├── infra/
 │   ├── bootstrap/
-│   ├── terraform/
 │   └── scripts/
-│
-├── tests/
-│   ├── integration/
-│   └── e2e/
-│
+├── apps/
 ├── docs/
-│
 ├── diagrams/
-│
+├── tests/
 ├── .github/
-│   └── workflows/
-│
 ├── docker-compose.yml
 ├── Makefile
 └── README.md
@@ -147,7 +103,6 @@ A production deployment would typically replace:
 | Azurite         | Azure Managed Storage         |
 | Docker Compose  | Kubernetes                    |
 | Local Volumes   | Managed Storage               |
-| Local Secrets   | Vault / Cloud Secret Managers |
 
 The objective is to learn architectural concepts while maintaining a fully reproducible development environment.
 
@@ -155,14 +110,9 @@ The objective is to learn architectural concepts while maintaining a fully repro
 
 ## Future Extensions
 
-* Multi-region simulation
-* Service mesh
-* Chaos engineering
-* Policy-as-Code
-* Cost monitoring
-* Distributed caching
-* Streaming pipelines
-* Hybrid cloud deployments
+* Observability stack
+* Security layer
+* ...
 
 ---
 
