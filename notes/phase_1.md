@@ -33,9 +33,9 @@ The deliverable is a maintainable local cloud engineering platform.
 
 ## Study Material
 
-* [Docker Overview Documentation](https://docs.docker.com/get-started/docker-overview/?utm_source=chatgpt.com)
-* [Docker Networking](https://docs.docker.com/network/?utm_source=chatgpt.com)
-* [Docker Storage Volumes](https://docs.docker.com/storage/volumes/?utm_source=chatgpt.com)
+* [Docker Overview Documentation](https://docs.docker.com/get-started/docker-overview/)
+* [Docker Networking](https://docs.docker.com/network/)
+* [Docker Storage Volumes](https://docs.docker.com/storage/volumes/)
 * [Containers From Scratch by Liz Rice](https://www.youtube.com/watch?v=8fi7uSYlOdc&utm_source=chatgpt.com) (This lecture is extremely important.)
 
 ## Practical Work
@@ -72,8 +72,8 @@ With:
 
 ## Study Material
 
-* [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/?utm_source=chatgpt.com)
-* [Distroless Images](https://github.com/GoogleContainerTools/distroless?utm_source=chatgpt.com)
+* [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+* [Distroless Images](https://github.com/GoogleContainerTools/distroless)
 
 ## Practical Work
 
@@ -107,7 +107,7 @@ Add:
 
 ## Study Material
 
-* [Docker Compose Documentation](https://docs.docker.com/compose/?utm_source=chatgpt.com)
+* [Docker Compose Documentation](https://docs.docker.com/compose/)
 
 ## Practical Work
 
@@ -140,8 +140,8 @@ With:
 
 ## Study Material
 
-* [NGINX Beginner Guide](https://nginx.org/en/docs/beginners_guide.html?utm_source=chatgpt.com)
-* [Traefik Documentation](https://doc.traefik.io/traefik/?utm_source=chatgpt.com)
+* [NGINX Beginner Guide](https://nginx.org/en/docs/beginners_guide.html)
+* [Traefik Documentation](https://doc.traefik.io/traefik/)
 
 ## Practical Work
 
@@ -168,8 +168,8 @@ Deploy:
 
 ## Study Material
 
-* [LocalStack Documentation](https://docs.localstack.cloud/?utm_source=chatgpt.com)
-* [AWS CLI Documentation](https://docs.aws.amazon.com/cli/latest/reference/?utm_source=chatgpt.com)
+* [LocalStack Documentation](https://docs.localstack.cloud/)
+* [AWS CLI Documentation](https://docs.aws.amazon.com/cli/latest/reference/)
 
 ## Practical Work
 
@@ -200,7 +200,7 @@ Interact using:
 
 ## Study Material
 
-* [LocalStack Lambda Docs](https://docs.localstack.cloud/user-guide/aws/lambda/?utm_source=chatgpt.com)
+* [LocalStack Lambda Docs](https://docs.localstack.cloud/user-guide/aws/lambda/)
 
 ## Practical Work
 
@@ -227,8 +227,8 @@ Implement (first real architecture):
 
 ## Study Material
 
-* [Azurite Repository](https://github.com/Azure/Azurite?utm_source=chatgpt.com)
-* [Azure Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction?utm_source=chatgpt.com)
+* [Azurite Repository](https://github.com/Azure/Azurite)
+* [Azure Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
 
 ## Practical Work
 
@@ -257,7 +257,7 @@ Use:
 
 ## Study Material
 
-* [SOLID Principles Overview](https://en.wikipedia.org/wiki/SOLID?utm_source=chatgpt.com)
+* [SOLID Principles Overview](https://en.wikipedia.org/wiki/SOLID)
 
 ## Practical Work
 
@@ -289,8 +289,8 @@ Then:
 
 ## Study Material
 
-* [Prometheus Introduction](https://prometheus.io/docs/introduction/overview/?utm_source=chatgpt.com)
-* [Grafana Documentation](https://grafana.com/docs/?utm_source=chatgpt.com)
+* [Prometheus Introduction](https://prometheus.io/docs/introduction/overview/)
+* [Grafana Documentation](https://grafana.com/docs/)
 
 ## Practical Work
 
@@ -318,7 +318,7 @@ Expose:
 
 ## Study Material
 
-* [OpenTelemetry Documentation](https://opentelemetry.io/docs/?utm_source=chatgpt.com)
+* [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
 
 ## Practical Work
 
@@ -358,7 +358,7 @@ make test
 
 ## Study Material
 
-* [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html?utm_source=chatgpt.com)
+* [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
 
 ## Deliverables
 
@@ -377,8 +377,8 @@ make test
 
 ## Study Material
 
-* [pytest Documentation](https://docs.pytest.org/?utm_source=chatgpt.com)
-* [Testcontainers Python](https://testcontainers-python.readthedocs.io/?utm_source=chatgpt.com)
+* [pytest Documentation](https://docs.pytest.org/)
+* [Testcontainers Python](https://testcontainers-python.readthedocs.io/)
 
 ## Practical Work
 
@@ -402,7 +402,7 @@ Test:
 
 ## Study Material
 
-* [C4 Model Documentation](https://c4model.com/?utm_source=chatgpt.com)
+* [C4 Model Documentation](https://c4model.com/)
 
 ## Practical Work
 
