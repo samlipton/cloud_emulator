@@ -63,6 +63,7 @@ cloud_emulator/
 │   ├── bootstrap/
 │   └── scripts/
 ├── apps/
+│   ├── python/ 
 ├── docs/
 ├── diagrams/
 ├── tests/

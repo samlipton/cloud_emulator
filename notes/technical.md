@@ -18,6 +18,15 @@ Common external services to containerize in Docker (regardless of what the app i
 | Authentication   | Keycloak                                                                                                                       |
 | Monitoring       | Prometheus, Grafana                                                                                                            |
 
+For a typical small AI microservice project, the most common stack is:
+
+Python/Rust App
+    |
+    +-- PostgreSQL
+    +-- Redis
+    +-- MinIO
+    +-- LLM service (OpenAI/Ollama)
+
 ## Architecture
 
 The platform simulates a realistic cloud workflow.
