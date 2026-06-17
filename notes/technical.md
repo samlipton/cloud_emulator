@@ -24,17 +24,16 @@ For most production applications, ordered by how frequently they are needed:
 
 For a portfolio project that demonstrates modern cloud-native architecture without excessive complexity, a very representative stack would be:
 
-Frontend
-    ↓
-API Service
-    ↓
+Frontend    \
+    ↓       \
+API Service \
+    ↓       \
 PostgreSQL
 + Redis
 + Keycloak
 + Prometheus/Grafana
 
 and later:
-
 + RabbitMQ
 + Worker
 + MinIO
@@ -80,7 +79,6 @@ The platform simulates a realistic cloud workflow.
 ## Network
 
 Good practices for ports in containerized systems:
-
 - Use conventional ports inside containers:
   - e.g. 80 (HTTP), 443 (HTTPS), 5432 (PostgreSQL)
   - Keeps services predictable and portable
@@ -104,7 +102,6 @@ Good practices for ports in containerized systems:
   - p 0:80 is fine for quick experiments, not reproducibility
 
 Core idea:
-
 - container ports = semantic/service-level
 - host ports = environment/deployment-level
 
