@@ -22,23 +22,7 @@ For most production applications, ordered by how frequently they are needed:
 | 12   | Search Engine               | Elasticsearch, OpenSearch                                      | Useful only when advanced search is required              |
 | 13   | LLM / AI Service            | [Ollama](https://ollama.com?utm_source=chatgpt.com), vLLM, TGI | Emerging but still niche compared to databases and caches |
 
-For a portfolio project that demonstrates modern cloud-native architecture without excessive complexity, a very representative stack would be:
-
-Frontend    \
-    ↓       \
-API Service \
-    ↓       \
-PostgreSQL
-+ Redis
-+ Keycloak
-+ Prometheus/Grafana
-
-and later:
-+ RabbitMQ
-+ Worker
-+ MinIO
-
-## Architecture
+## Stack Architecture
 
 The platform simulates a realistic cloud workflow.
 
