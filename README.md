@@ -9,7 +9,6 @@ A production-inspired local cloud platform that emulates AWS and Azure essential
 This project reproduces common cloud-native architectures locally using:
 
 * AWS-compatible services via LocalStack
-* Azure-compatible services via Azurite
 * Docker and Docker Compose
 * Infrastructure-as-Code
 * CI/CD pipelines
@@ -26,7 +25,6 @@ The repository is designed as both:
 ### Cloud Engineering
 
 * AWS service integration
-* Azure service integration
 * Event-driven architectures
 * Serverless computing
 * Infrastructure automation
@@ -56,7 +54,6 @@ The repository is designed as both:
 cloud_emulator/
 ├── docker/
 │   ├── localstack/
-│   ├── azurite/
 │   ├── monitoring/
 │   └── reverse-proxy/
 ├── infra/
@@ -80,7 +77,7 @@ cloud_emulator/
 ### Event-Driven File Processing
 
 1. User uploads a file.
-2. File is stored in S3 or Azure Blob Storage.
+2. File is stored in S3 Blob Storage.
 3. Storage event generates a queue message.
 4. Worker consumes the message.
 5. Metadata is extracted.
@@ -101,7 +98,6 @@ A production deployment would typically replace:
 | Local Component | Production Equivalent         |
 | --------------- | ----------------------------- |
 | LocalStack      | AWS Managed Services          |
-| Azurite         | Azure Managed Storage         |
 | Docker Compose  | Kubernetes                    |
 | Local Volumes   | Managed Storage               |
 
