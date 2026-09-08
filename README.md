@@ -1,6 +1,6 @@
 # Cloud Platform Core
 
-A production-inspired local cloud platform that emulates AWS and Azure essential services using Docker. The goal is to provide a hands-on environment for learning and experimenting on modern cloud engineering.
+A production-inspired local cloud platform that emulates AWS essential services using Docker. The goal is to provide a hands-on environment for learning and experimenting on modern cloud engineering.
 
 ---
 
@@ -62,7 +62,6 @@ cloud_emulator/
 ├── apps/
 │   ├── api/
 │   └── worker/
-├── docs/
 ├── diagrams/
 ├── tests/
 ├── .github/
