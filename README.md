@@ -60,7 +60,8 @@ cloud_emulator/
 │   ├── bootstrap/
 │   └── scripts/
 ├── apps/
-│   ├── python/ 
+│   ├── api/
+│   └── worker/
 ├── docs/
 ├── diagrams/
 ├── tests/
@@ -68,6 +69,40 @@ cloud_emulator/
 ├── docker-compose.yml
 ├── Makefile
 └── README.md
+```
+
+---
+
+## Quickstart
+
+The current slice implements the first half of the event-driven file processing
+example below: upload → S3 → SQS → worker → DynamoDB.
+
+```bash
+cp .env.example .env
+make up
+```
+
+Upload a file:
+
+```bash
+curl -F file=@README.md http://localhost:8000/upload
+# {"file_id": "...", "bucket": "uploads", "key": ".../README.md", ...}
+```
+
+Fetch the metadata once the worker has processed it:
+
+```bash
+curl http://localhost:8000/files/<file_id>
+```
+
+Other commands:
+
+```bash
+make logs   # tail all service logs
+make test   # run the integration test suite against the running stack
+make down   # stop the stack
+make reset  # wipe volumes and rebuild from scratch
 ```
 
 ---

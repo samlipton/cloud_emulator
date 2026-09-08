@@ -1,0 +1,61 @@
+services:
+  localstack:
+    image: localstack/localstack:3
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,sqs,dynamodb
+      - AWS_DEFAULT_REGION=${AWS_REGION}
+      - AWS_REGION=${AWS_REGION}
+      - S3_BUCKET=${S3_BUCKET}
+      - SQS_QUEUE_NAME=${SQS_QUEUE_NAME}
+      - DYNAMODB_TABLE=${DYNAMODB_TABLE}
+    volumes:
+      - localstack_data:/var/lib/localstack
+      - ./docker/localstack/init:/etc/localstack/init/ready.d
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - cloud-net
+
+  api:
+    build: ./apps/api
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - LOCALSTACK_ENDPOINT=${LOCALSTACK_ENDPOINT}
+      - S3_BUCKET=${S3_BUCKET}
+      - DYNAMODB_TABLE=${DYNAMODB_TABLE}
+    depends_on:
+      localstack:
+        condition: service_healthy
+    networks:
+      - cloud-net
+
+  worker:
+    build: ./apps/worker
+    environment:
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - LOCALSTACK_ENDPOINT=${LOCALSTACK_ENDPOINT}
+      - SQS_QUEUE_NAME=${SQS_QUEUE_NAME}
+      - DYNAMODB_TABLE=${DYNAMODB_TABLE}
+    depends_on:
+      localstack:
+        condition: service_healthy
+    networks:
+      - cloud-net
+
+networks:
+  cloud-net:
+
+volumes:
+  localstack_data:
